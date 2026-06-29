@@ -1,8 +1,10 @@
 {
-  "name": "The Sakura & Seoul Journal",
+  "name": "Sakura \u2022 Seoul Journal",
   "short_name": "Sakura Seoul",
-  "start_url": "index.html",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#fff8ef",
-  "theme_color": "#c96f60"
+  "theme_color": "#fff4e7",
+  "orientation": "any",
+  "icons": []
 }

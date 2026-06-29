@@ -1,14 +1,17 @@
-# The Sakura & Seoul Journal — Blossom v0.1
+# Sakura • Seoul Journal — PWA v0.1
 
-A personal, offline-first honeymoon travel companion prototype for Aakash & Riya.
+First iOS-friendly development build.
 
-## Run locally
-Open `index.html` in a browser.
+## Includes
+- Locked app shell/sidebar
+- Sakura • Seoul Journal branding
+- Itinerary / Master Planner module
+- Gentle Pause
+- Press Leaf interaction
+- Basic offline cache via service worker
 
-## Deploy
-You can upload this folder to:
-- GitHub Pages
-- Netlify Drop
-- Vercel
+## How to deploy
+Upload these files to GitHub Pages, Netlify, or Vercel.
 
-No build step. No API keys. No backend.
+## iOS install
+Open deployed link in Safari → Share → Add to Home Screen.
