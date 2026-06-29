@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Sakura & Seoul Journal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">🌸</div>
+        <div>
+          <h1>Sakura & Seoul</h1>
+          <p>Aakash & Riya · Oct 6–25, 2026</p>
+        </div>
+      </div>
+
+      <button class="nav active" data-screen="home">⌂ Home</button>
+      <button class="nav" data-screen="readiness">◇ Readiness</button>
+      <button class="nav" data-screen="journey">⌖ Journey</button>
+      <button class="nav" data-screen="budget">◉ Budget</button>
+      <button class="nav" data-screen="add">＋ Add</button>
+      <button class="nav" data-screen="repository">▧ Repository</button>
+      <button class="nav" data-screen="wallet">▣ Wallet</button>
+      <button class="nav" data-screen="today">✎ Today</button>
+    </aside>
+
+    <main>
+      <section id="home" class="screen active">
+        <p class="eyebrow">Blossom v0.1 · Founder’s Edition</p>
+        <h2>Good morning,<br>Aakash & Riya 🌸</h2>
+        <p class="sub">A journal that tells the story, but behaves like a travel tool.</p>
+
+        <div class="card hero-card">
+          <div class="card-head">
+            <div>
+              <h3>Journey Progress</h3>
+              <p>Toronto → Osaka → Kyoto → Fuji → Tokyo → Seoul → Home</p>
+            </div>
+            <span class="badge">Oct 6 onwards</span>
+          </div>
+          <div class="route">
+            <span>✈️<b>Toronto</b></span>
+            <span>🐙<b>Osaka</b></span>
+            <span>⛩<b>Kyoto</b></span>
+            <span>🗻<b>Fuji</b></span>
+            <span>🗼<b>Tokyo</b></span>
+            <span>🏙<b>Seoul</b></span>
+            <span>⌂<b>Home</b></span>
+          </div>
+          <div class="kamakura-train">🚃</div>
+        </div>
+
+        <div class="grid three">
+          <div class="card">
+            <h3>Trip Readiness</h3>
+            <div class="donut">73%</div>
+            <button data-screen="readiness">Open readiness</button>
+          </div>
+
+          <div class="card">
+            <h3>Budget</h3>
+            <p class="big">$9,741 / $16,741</p>
+            <p class="sub">58% used · $7,000 remaining</p>
+            <button data-screen="budget">Open budget</button>
+          </div>
+
+          <div class="card">
+            <h3>Today’s Story</h3>
+            <p>Leave a piece of today here: photo, receipt, note, or memory.</p>
+            <button data-screen="today">Open today</button>
+          </div>
+        </div>
+
+        <h3 class="section-title">City Hubs</h3>
+        <div class="city-grid">
+          <button onclick="openCity('osaka')">🐙<b>Osaka</b><small>Nara · Uji · Hiraoka · Dotonbori</small></button>
+          <button onclick="openCity('kyoto')">⛩<b>Kyoto</b><small>Fushimi · Arashiyama · Gion</small></button>
+          <button onclick="openCity('fuji')">🗻<b>Fuji</b><small>Ropeway · Chureito · Lake</small></button>
+          <button onclick="openCity('tokyo')">🗼<b>Tokyo</b><small>Disney · Kamakura · Ginza</small></button>
+          <button onclick="openCity('seoul')">🏙<b>Seoul</b><small>Namsan · Myeongdong · Han River</small></button>
+        </div>
+      </section>
+
+      <section id="readiness" class="screen">
+        <h2>Trip Readiness 🌸</h2>
+        <p class="sub">Before the trip: milestones, reminders, tickets, packing, and essentials.</p>
+
+        <div class="grid two">
+          <div class="card">
+            <h3>Overall Readiness</h3>
+            <div class="donut large">73%</div>
+            <ul class="list">
+              <li><span>✈️ Flights</span><b>100%</b></li>
+              <li><span>🏨 Hotels</span><b>100%</b></li>
+              <li><span>🎟 Tickets</span><b>40%</b></li>
+              <li><span>🧳 Packing</span><b>0%</b></li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>Journey Milestones</h3>
+            <div class="milestones">
+              <button onclick="openMilestone('Tokyo Disney', 'Book tickets', 'Jul 6')">🏰 <b>Tokyo Disney</b><small>Book tickets · Jul 6</small></button>
+              <button onclick="openMilestone('Aoniyoshi', 'Reserve sightseeing train', 'Sep 6')">🚃 <b>Aoniyoshi</b><small>Reserve train · Sep 6</small></button>
+              <button onclick="openMilestone('Glänta', 'Book ring workshop', 'Aug 1')">💍 <b>Glänta</b><small>Book workshop · Aug 1</small></button>
+              <button onclick="openMilestone('TeamLab', 'Book tickets', 'Jul 15')">✨ <b>TeamLab</b><small>Book tickets · Jul 15</small></button>
+              <button onclick="openMilestone('eSIM', 'Buy and activate eSIM', 'Sep 20')">📱 <b>eSIM</b><small>Set up · Sep 20</small></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid three">
+          <div class="card">
+            <h3>Packing</h3>
+            <p class="big">0 / 23</p>
+            <p class="sub">Clothes · Electronics · Medicines · Documents</p>
+          </div>
+          <div class="card">
+            <h3>Essentials</h3>
+            <ul class="checklist">
+              <li><input type="checkbox"> Passport</li>
+              <li><input type="checkbox"> Travel insurance</li>
+              <li><input type="checkbox"> Credit cards</li>
+              <li><input type="checkbox"> Cash JPY/KRW</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Ideas</h3>
+            <p>Flower ice cream · ReFa · Brand Off · Photo booths · Namsan · Kamakura station</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="journey" class="screen">
+        <h2>Journey</h2>
+        <p class="sub">Tap a city. Each place opens as a curated hub, not an infinite scroll.</p>
+        <div class="city-grid">
+          <button onclick="openCity('osaka')">🐙<b>Osaka</b><small>Nara · Uji · Hiraoka</small></button>
+          <button onclick="openCity('kyoto')">⛩<b>Kyoto</b><small>Fushimi · Arashiyama · Gion</small></button>
+          <button onclick="openCity('fuji')">🗻<b>Fuji</b><small>Lake · Ropeway · Chureito</small></button>
+          <button onclick="openCity('tokyo')">🗼<b>Tokyo</b><small>Disney · Kamakura · Ginza</small></button>
+          <button onclick="openCity('seoul')">🏙<b>Seoul</b><small>Namsan · Myeongdong · Han River</small></button>
+        </div>
+      </section>
+
+      <section id="city" class="screen">
+        <button class="back" data-screen="home">← Home</button>
+        <div id="cityHero" class="card city-hero"></div>
+        <div id="cityCards" class="grid three"></div>
+      </section>
+
+      <section id="budget" class="screen">
+        <h2>Budget</h2>
+        <p class="sub">Set budget buckets once. Every input updates the right bucket automatically.</p>
+
+        <div class="grid two">
+          <div class="card">
+            <h3>Total Budget Setup</h3>
+            <div class="bucket"><span>✈️ Flights</span><input value="$1,320"></div>
+            <div class="bucket"><span>🛏 Stay</span><input value="$5,590"></div>
+            <div class="bucket"><span>🍴 Food</span><input value="$2,500"></div>
+            <div class="bucket"><span>🚆 Transport</span><input value="$1,000"></div>
+            <div class="bucket"><span>🛍 Shopping</span><input value="$3,500"></div>
+            <div class="bucket"><span>🎟 Attractions</span><input value="$1,000"></div>
+            <div class="summary"><small>Total Trip Budget</small><b>$16,741 CAD</b></div>
+          </div>
+
+          <div class="card">
+            <h3>Budget Train</h3>
+            <div class="budget-track">
+              <span>✈️<small>Flights</small></span>
+              <span>🛏<small>Stay</small></span>
+              <span>🍴<small>Food</small></span>
+              <span>🚆<small>Transit</small></span>
+              <span>🛍<small>Shop</small></span>
+              <span>🎟<small>Tickets</small></span>
+            </div>
+            <div class="budget-train">🚃</div>
+            <p class="big">58% used</p>
+            <p class="sub">$9,741 spent · $7,000 remaining</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="add" class="screen">
+        <h2>Quick Add</h2>
+        <p class="sub">One input → budget, city, timeline, repository, and today’s story.</p>
+        <div class="choice-grid">
+          <button onclick="startFlow('🍜 We ate')">🍜 We ate</button>
+          <button onclick="startFlow('🛍 We bought')">🛍 We bought</button>
+          <button onclick="startFlow('🏨 We checked in')">🏨 We checked in</button>
+          <button onclick="startFlow('🚄 We travelled')">🚄 We travelled</button>
+          <button onclick="startFlow('❤️ We made a memory')">❤️ We made a memory</button>
+          <button onclick="startFlow('✍ Quick note')">✍ Quick note</button>
+        </div>
+        <div id="flowArea"></div>
+      </section>
+
+      <section id="repository" class="screen">
+        <h2>Repository</h2>
+        <p class="sub">Local-first archive for bills, tickets, photos, hotel notes, ordered items, and memories.</p>
+        <div class="repo-grid" id="repoGrid">
+          <div class="repo-card">🧾<b>T’s Tantan receipt</b><small>Tokyo · Food</small></div>
+          <div class="repo-card">🎟<b>Disney ticket</b><small>Tokyo · Attraction</small></div>
+          <div class="repo-card">🏨<b>Daiwa Roynet</b><small>Hotel photo</small></div>
+          <div class="repo-card">🛍<b>ReFa</b><small>Ginza shopping</small></div>
+          <div class="repo-card">📷<b>Purikura</b><small>Today’s Story</small></div>
+        </div>
+      </section>
+
+      <section id="wallet" class="screen">
+        <h2>Wallet</h2>
+        <div class="grid three">
+          <div class="card">✈️<h3>Flights</h3><p>Air Canada + Seoul return</p></div>
+          <div class="card">🏨<h3>Hotels</h3><p>5 stays + reviews</p></div>
+          <div class="card">🎟<h3>Tickets</h3><p>Disney · TeamLab · Glänta</p></div>
+          <div class="card">🚆<h3>Transport</h3><p>JR · Aoniyoshi · airport</p></div>
+          <div class="card">🛂<h3>Documents</h3><p>Passport · insurance · cards</p></div>
+        </div>
+      </section>
+
+      <section id="today" class="screen">
+        <h2>Today’s Story</h2>
+        <p class="sub">Fast, visual, and not homework.</p>
+        <div class="card">
+          <h3>Leave a piece of today here</h3>
+          <div class="photo-box">📷 Photo booth strip / ticket / receipt / visual memory</div>
+          <textarea placeholder="Aakash remembers..."></textarea>
+          <textarea placeholder="Riya remembers..."></textarea>
+          <button>Add to Today’s Story</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-card">
+      <button class="close" onclick="closeModal()">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
