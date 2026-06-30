@@ -1,17 +1,5 @@
-# Sakura • Seoul Journal — PWA v0.1
+# Sakura • Seoul Journal — PWA v0.2
 
-First iOS-friendly development build.
+Golden Master v1 navigation architecture.
 
-## Includes
-- Locked app shell/sidebar
-- Sakura • Seoul Journal branding
-- Itinerary / Master Planner module
-- Gentle Pause
-- Press Leaf interaction
-- Basic offline cache via service worker
-
-## How to deploy
-Upload these files to GitHub Pages, Netlify, or Vercel.
-
-## iOS install
-Open deployed link in Safari → Share → Add to Home Screen.
+Includes Home, Journey train, Budget train, city selection, city hub, planner, itinerary, Gentle Pause and Press Leaf.
